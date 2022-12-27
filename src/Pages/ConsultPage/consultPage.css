@@ -1,0 +1,95 @@
+.consult-container{
+    display: flex;
+
+}
+.consult-messages {
+    display: flex;
+    flex-direction: column;
+    min-height: 65vh;
+    /*overflow-y: scroll;*/
+    overflow:hidden;
+
+    color: white;
+    background:var(--primary);
+}
+
+.chat-message-left,
+.chat-message-right {
+    display: flex;
+    flex-shrink: 0
+}
+
+.chat-message-left {
+    margin-right: auto;
+    background:gray ;
+    height: auto;
+    border-radius: 10px;
+    width:max-content;
+    max-width: 50%;
+    word-break: break-word;
+}
+
+.chat-message-right {
+    flex-direction: row-reverse;
+    margin-left: auto;
+    background: var(--message-primary);
+    height: max-content;
+    width:max-content;
+    border-radius: 10px;
+    max-width: 50%;
+    word-break: break-word;
+}
+
+
+
+.flex-grow-0 {
+    flex-grow: 0!important;
+}
+.border-top {
+    border-top: 1px solid #dee2e6!important;
+}
+.user-status{
+    width: 10px;
+    height: 10px;
+
+}
+.notification{
+    background: var(--message-primary);
+    color: white;
+    align-self: center;
+    font-size: 13px;
+    padding: 5px;
+    position: absolute;
+    left:310px;
+    border-radius: 9px;
+
+}
+.users-list-wrapper{
+
+    width: 90%;
+    height:70px ;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);    margin: 10px;
+    padding:15px ;
+
+}
+.users-list-group{
+    min-width:20%;
+}
+.users-list-content{
+    margin-left: 15px;
+    display: flex;
+}
+.interlocutor-data-field{
+    border-bottom:1px solid #dee2e6 ;
+    display: flex;
+    padding: 10px;
+}
+.interlocutor-data-field img{
+    border-radius: 50px;
+    margin-right:10px ;
+}
+.file-label{
+    color: var(--primary-text);
+}

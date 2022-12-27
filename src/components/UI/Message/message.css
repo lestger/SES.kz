@@ -1,0 +1,28 @@
+
+.chat-message-left,
+.chat-message-right {
+    display: flex;
+    flex-shrink: 0
+}
+
+.chat-message-left {
+    margin-right: auto;
+    background: #6c757d;
+    height: auto;
+    border-radius: 10px;
+    width:max-content;
+    max-width: 80%;
+    word-break: break-word;
+    color: white;
+}
+
+.chat-message-right {
+    flex-direction: row-reverse;
+    margin-left: auto;
+    background: #3390ECFF;
+    height: max-content;
+    width:max-content;
+    border-radius: 10px;
+    max-width: 50%;
+    word-break: break-word;
+}

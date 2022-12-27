@@ -1,0 +1,44 @@
+.fav_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.fav_card{
+    flex-direction: row;
+    justify-content: start;
+    width: 65%;
+    height:150px;
+    border-radius:10px;
+    margin-bottom: 10px;
+
+}
+.info_block{
+    margin-left: 40px;
+}
+
+.info_block .card_btns{
+    float: right;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.info_block .card_btns b{
+    font-size: 25px;
+}
+.info_block  span{
+    visibility: hidden;
+    font-size: 25px;
+    opacity: 0;
+    transition: ease-in .2s;
+}
+.fav_card:hover  span{
+   visibility: visible;
+    opacity: 1;
+}
+
+
+.fav_card img{
+width: 120px;
+height: 120px;
+}

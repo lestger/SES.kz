@@ -1,0 +1,33 @@
+investor{
+full_name
+email,
+phone,
+passwd
+}
+
+company{
+company_name,
+en_form,
+address,
+IIN,
+BIK,
+bank_name,
+email,
+phone,
+passwd,
+full_name,
+}
+
+
+
+func:{
+поиск пом.
+поиск оборуд.
+пакет услуг
+Консультация(чат с спец.)
+Фильтр
+Карта
+vr360(Возможно)
+}
+Loader
+AdminPanel

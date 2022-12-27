@@ -1,0 +1,9 @@
+.delete-button{visibility: hidden;
+    /*font-size: 20px;*/
+
+    opacity: 0;
+    transition: ease-in .2s;}
+.cart__item:hover  .delete-button{
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,47 @@
+.bc-filter{
+    width: 260px;
+    height: 600px;
+    margin-left:20px ;
+    border: 1px solid #E6E4E4;
+    padding: 10px 25px;
+    border-radius: 5px;
+    position: fixed;
+    bottom:20px;
+    left:0;
+background-color: white;
+
+}
+.product-filter{
+    width: 260px;
+    height: 600px;
+    margin-right:20px ;
+    border: 1px solid #E6E4E4;
+    padding: 10px 25px;
+    border-radius: 5px;
+    position: fixed;
+    bottom:20px;
+   right:0;
+    background-color: white;
+
+
+}
+.bc-container{
+    display: flex;
+    gap:300px
+}
+.price-input{
+    display: flex;
+    gap:10px
+
+}
+.price-input input{
+    width: 50%;
+}
+.filter-item{
+
+    padding:10px;
+    margin-bottom:10px
+}
+.bc-filter:last-child{
+    margin-bottom:0;
+}

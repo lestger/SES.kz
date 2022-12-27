@@ -1,0 +1,86 @@
+
+#features {
+    text-align: center;
+    padding: 3vw 8vw 100px;
+    /*border:1px solid #e2e3e5;*/
+    border-radius: 20px;
+}
+
+#features .fea-base {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+    grid-gap:1rem;
+    margin-top: 50px;
+}
+#features .fea-box{
+    background:#F9F9FF;
+    text-align: start;
+    padding:20px;
+    border:1px solid #e2e3e5;
+    border-radius: 20px;
+}
+
+#features .fea-box svg{
+    font-size: 2.3rem;
+    color:rgb(44,44,80);
+}
+#features .fea-box h3{
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46,46,59);
+    padding: 13px 0 7px 0;
+}
+#features .fea-box h2{
+
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(46,46,59);
+    padding: 13px 0 7px 0;
+}
+#features .fea-box p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(70,70,87);
+
+}
+#ses-packs{
+    display: flex;
+    gap:5vw;
+    padding: 3vw 50px;
+    border:solid #e2e3e5 1px;
+width: 100%;
+}
+#ses-packs .pack-content{
+
+}
+#ses-packs .pack-content  svg{
+   height: 40px;
+    width: 50px;
+}
+#ses-packs .pack-content  img{
+    height: 40px;
+    width: 50px;
+}
+#ses-packs .pack-image img{
+    width:450px;
+    height:300px;
+transform: scale(1.2);
+}
+
+#ses-packs .pack-name{
+     font-size: 2rem;
+     font-weight: 600;
+     color: rgb(46,46,59);
+     padding: 13px 0 7px 0;
+ }
+.bank-card{
+    width:300px;
+
+    border-radius: 5%;
+}
+.bank-card svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

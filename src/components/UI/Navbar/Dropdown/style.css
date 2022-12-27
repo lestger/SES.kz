@@ -1,0 +1,49 @@
+.user-button{
+    background-color: transparent;
+    border: none;
+
+}
+.user-button:hover span{
+    opacity: 1;
+    visibility: visible;
+}
+.user-button span{
+    position: absolute;
+    transition: ease-in .2s;
+    top: 1.7em;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    transform: translateX(-50px);
+    background-color: white;
+    width: 21vh;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top:10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+.menu-item span{
+    margin-left: 5px;
+}
+
+.active{
+    visibility: visible;
+    opacity:1;
+    transform: translateY(0);
+}
+.inactive{
+    visibility: hidden;
+    opacity:0;
+}
+.menu-item a{
+    text-decoration:none ;
+}

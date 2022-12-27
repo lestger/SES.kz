@@ -1,0 +1,38 @@
+.loading-border{
+    border: 3px dashed #FC8507;
+    border-radius: 150px;
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: App-logo-spin .5s ease-in infinite;
+
+}
+
+.loading img{
+    width: 80px;
+    height: 20px;
+    position: absolute;
+left:730px;
+    right:0;
+
+
+}
+@keyframes App-logo-spin{
+    0%{transform: rotate(-360deg);}
+    100%{transform:  rotate(360deg)}
+}
+.content-loader{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FC8507;
+    border-radius: 50%;
+    animation: content-loader-scale .5s infinite linear;
+}
+@keyframes content-loader-scale{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
