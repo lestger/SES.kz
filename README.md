@@ -6,6 +6,7 @@
 -Filter of Goods<br/>
 -Chat with support<br/>
 -Admin Panel</h6>
+-and many other features...
 
 ### Used Libs:
 -react-yandex-maps
