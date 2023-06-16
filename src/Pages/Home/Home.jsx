@@ -7,23 +7,21 @@ import Lenovo from "../../img/brands/Lenovo-logo 1.svg";
 import Oppo from "../../img/brands/oppo 1.svg";
 import LG from "../../img/brands/1280px-LG_Logo_Slogan_3d 1.svg";
 import Epson from "../../img/brands/2560px-Epson_logo 1.svg";
-import Huawei
-    from "../../img/brands/png-transparent-logo-huawei-customer-service-centre-华为-huawei-y-6-2018-dual-sim-4g-16gb-blue-hardware-electronic-logo-oppo-emblem-text-logo 1.svg";
+import Huawei from "../../img/brands/png-transparent-logo-huawei-customer-service-centre-华为-huawei-y-6-2018-dual-sim-4g-16gb-blue-hardware-electronic-logo-oppo-emblem-text-logo 1.svg";
 import '../../styles/main.css'
 import '../../components/UI/Footer/footer.css'
-import VR from '../../img/icons/VR.svg';
 import {Footer} from "../../components/UI/Footer/Footer";
 import {ChatWiget} from "../../components/ChatWidget/ChatWiget";
 import {AuthContext} from "../../components/context/auth";
 import {useContext, useState} from "react";
 import {useDocData} from "../../hooks/useDocData";
 import {ImStarEmpty} from "react-icons/im";
-import {BsBookmarkStar, BsStopwatch} from "react-icons/bs";
+import {BsStopwatch} from "react-icons/bs";
 import {MdPlace, MdProductionQuantityLimits} from "react-icons/md";
 import {RiChatSmile3Line} from "@react-icons/all-files/ri/RiChatSmile3Line";
 import Modalwindow from "../../components/UI/ModalWindow/Modalwindow";
 import {RiBankCard2Line, RiMessage3Line} from "react-icons/ri";
-import {auth, doc, db, updateDoc} from "../../API/Firebase";
+import {auth, db, doc, updateDoc} from "../../API/Firebase";
 import SESPRO from '../../img/sesPro.png'
 import {TbTruckDelivery} from "react-icons/tb";
 
@@ -177,7 +175,7 @@ c60 0 76 -4 95 -22z"/>
             <section>
                 <div className="container">
                     <div className="brands">
-                        <a rel="noreferrer" target="_blank" to={"https://www.canon.ru/"}>
+                        <a rel="noreferrer" target="_blank" href={"https://www.canon.ru/"}>
                             <div className="brand"><img src={Canon} alt=""/></div>
                         </a>
                         <a rel="noreferrer" target="_blank" href={"https://www.microsoft.com/ru-kz"}>
@@ -208,12 +206,13 @@ c60 0 76 -4 95 -22z"/>
                                 alt=""/></div>
                         </a>
                     </div>
+                    {user?currentUser.sesPro&&<ChatWiget/>:null}
                 </div>
             </section>
             <br/>
             <br/>
 <Footer/>
-            {user?currentUser.sesPro&&<ChatWiget/>:null}
+
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import img from '../../img/icons/profile.svg'
-import {TiTickOutline} from "react-icons/ti";
 import {AiOutlineStop} from "react-icons/ai";
+
 const AvailableUsers = ({user,setUser,finish}) => {
 
 
@@ -20,7 +20,7 @@ const AvailableUsers = ({user,setUser,finish}) => {
                         <div className="users-list-content">
                             <div className="">{user.username}</div>
 
-                            <button className="btn btn-outline-danger" style={{marginLeft:80}} onClick={()=>{finish(user.ID)}}><AiOutlineStop/></button>
+                            <button className="btn btn-outline-danger"  onClick={()=>{finish(user.ID)}}><AiOutlineStop/></button>
 
                     </div>
 

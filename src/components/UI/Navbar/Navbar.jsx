@@ -2,7 +2,6 @@ import topLocation from "../../../img/icons/top-location.svg";
 import telephone from "../../../img/icons/telephone.svg";
 import smartphone from "../../../img/icons/smartphone.svg";
 import Logo from "../../../img/logo/SES.kz.png";
-import fav from "../../../img/icons/heart.svg";
 import cart from "../../../img/icons/card.svg";
 import login from "../../../img/icons/profile.svg";
 import './header.css';
@@ -77,9 +76,7 @@ const user=useContext(AuthContext);
 
                             <div className="nav-toolbar-box">
                                 {user.user?
-                                    loading?
-                                        <div style={{background:'#B8B8B8',borderRadius:35,width:35,height:35}}/>
-                                        : <DropdownMenu userData={userData}/>
+                                    loading? null : <DropdownMenu userData={userData}/>
                                      : <Link to="/login"><img src={login} alt=""/><br/>Войти</Link>}
 
                             </div>

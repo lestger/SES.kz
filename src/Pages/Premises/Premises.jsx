@@ -1,6 +1,6 @@
 import {useState} from "react";
 import Filter from "../../components/Filter";
-import {usePost} from "../../components/useSortedPosts";
+import {usePost} from "../../hooks/useSortedPosts";
 import './premises.css'
 import {useDocData} from "../../hooks/useDocData";
 import {BusnessCentersList} from "../../components/busnessCenterList/BusnessCentersList";

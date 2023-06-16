@@ -4,7 +4,6 @@ import {useDetectOutsideClick} from "../../../../hooks/useDetectOutsudeClick";
 import {Link, useNavigate} from "react-router-dom";
 import {MdMeetingRoom, MdOutlineAdminPanelSettings} from "react-icons/md";
 import login from "../../../../img/icons/profile.svg";
-import {useDocData} from "../../../../hooks/useDocData";
 import {FaRegUser} from "react-icons/fa";
 import {getAuth, signOut} from "../../../../API/Firebase";
 import {BsChatText} from "react-icons/bs";

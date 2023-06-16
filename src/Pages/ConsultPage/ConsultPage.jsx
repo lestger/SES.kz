@@ -34,7 +34,7 @@ export const ConsultPage = () => {
             id: Date.now().toString(36) + Math.random().toString(36).substr(2)
         });
     }
-    const [activeUsers,setActiveUsers]=useMessageCol('ActiveUsers',user);
+    const [activeUsers]=useMessageCol('ActiveUsers',user);
 
     const finishConversation = async (id) => {
 
@@ -49,17 +49,14 @@ export const ConsultPage = () => {
     }
     return (
         <>
-
-
-
             <div className=" consult-container">
                 <div className={'users-list-group'}>
                     <div className={'users-list-item'}>
-                        {activeUsers.map((user) => <AvailableUsers finish={finishConversation}user={user}  key={user.ID} setUser={setUser}/>)}
-                        <center><hr className="my-1" style={{width: "50px"}}/></center>
+                        {activeUsers.map((user) => <AvailableUsers finish={finishConversation} user={user}  key={user.ID} setUser={setUser}/>)}
+                        <hr className="my-1 w-25 align-self-center"/>
                     </div>
                 </div>
-                <div style={{display:"absolute", width:'100%',height:'100%'}}>
+                <div className=" consult-chat" >
                     {user && activeUsers.length!==0?
                         <>
                             <div className={"interlocutor-data-field"}>

@@ -2,15 +2,17 @@
     display: flex;
 
 }
+.consult-chat{
+    width: 100%;
+}
 .consult-messages {
     display: flex;
     flex-direction: column;
     min-height: 65vh;
     /*overflow-y: scroll;*/
     overflow:hidden;
-
     color: white;
-    background:var(--primary);
+
 }
 
 .chat-message-left,
@@ -32,7 +34,7 @@
 .chat-message-right {
     flex-direction: row-reverse;
     margin-left: auto;
-    background: var(--message-primary);
+    background: #3390ECFF;
     height: max-content;
     width:max-content;
     border-radius: 10px;
@@ -42,30 +44,17 @@
 
 
 
-.flex-grow-0 {
-    flex-grow: 0!important;
-}
-.border-top {
-    border-top: 1px solid #dee2e6!important;
-}
-.user-status{
-    width: 10px;
-    height: 10px;
 
-}
-.notification{
-    background: var(--message-primary);
-    color: white;
-    align-self: center;
-    font-size: 13px;
-    padding: 5px;
-    position: absolute;
-    left:310px;
-    border-radius: 9px;
+
+
+.users-list-item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
 }
 .users-list-wrapper{
-
+    position: relative;
     width: 90%;
     height:70px ;
     border: none;
@@ -81,6 +70,11 @@
     margin-left: 15px;
     display: flex;
 }
+.users-list-content button{
+    position: absolute;
+    left:80%;
+
+}
 .interlocutor-data-field{
     border-bottom:1px solid #dee2e6 ;
     display: flex;
@@ -89,7 +83,4 @@
 .interlocutor-data-field img{
     border-radius: 50px;
     margin-right:10px ;
-}
-.file-label{
-    color: var(--primary-text);
 }

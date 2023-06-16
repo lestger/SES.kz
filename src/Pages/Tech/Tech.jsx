@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import Filter from "../../components/Filter";
-import {usePost} from "../../components/useSortedPosts";
+import {usePost} from "../../hooks/useSortedPosts";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDocData} from "../../hooks/useDocData";
 import {db, getDocs} from "../../API/Firebase";

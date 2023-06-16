@@ -29,5 +29,4 @@ func:{
 Карта
 vr360(Возможно)
 }
-Loader
 AdminPanel

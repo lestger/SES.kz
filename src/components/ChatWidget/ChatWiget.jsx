@@ -1,17 +1,15 @@
 import './ChatWidget.css'
-import {useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import {BsChatRightText} from "react-icons/bs";
 import {BiSend} from "react-icons/bi";
 import img from '../../img/icons/profile.svg'
 import {useDetectOutsideClick} from "../../hooks/useDetectOutsudeClick";
 import {addDoc, arrayUnion, doc, getDocs, query, updateDoc, where} from "firebase/firestore";
 import {auth, collection, db, storage} from "../../API/Firebase";
-import {useDocData} from "../../hooks/useDocData";
 import {getDownloadURL, ref, uploadBytes} from "firebase/storage";
 import {useMessageCol} from "../../hooks/useMessageCol";
 import {ContentLoader} from "../UI/Loader/ContentLoader";
 import Message from "../UI/Message/Message";
-import React from "react";
 
 export const ChatWiget = () => {
     const [consult,setConsult]=useState('');
@@ -65,9 +63,7 @@ const messageCollection=collection(db, 'messages', (id+auth.currentUser.uid), 'c
         }
         else{return null}
 
-        // const queueRef = collection(db, "queue");
-        // const consultantRef = collection(db, "consultants");
-        // const q = await query(consultantRef, where("users", "==", auth.currentUser.uid));
+
     }
     const finishConversation = async (id) => {
 
@@ -83,7 +79,6 @@ const messageCollection=collection(db, 'messages', (id+auth.currentUser.uid), 'c
         setConsult('');
         setIsTalking(false);
         setLoading(false)
-        // setMessages()
     }
     const openChat=async ()=>{
         setLoading(true);
@@ -93,9 +88,9 @@ const messageCollection=collection(db, 'messages', (id+auth.currentUser.uid), 'c
         console.log("OPENED: ",activeConsultant);
 
         setIsTalking(true);
-        // console.log(activeConsultant);
+
         if(activeConsultant){
-            const col=collection(db, 'messages', 'chat',(activeConsultant.ID + auth.currentUser.uid));
+            collection(db, 'messages', 'chat',(activeConsultant.ID + auth.currentUser.uid));
 
             await updateDoc(doc(db, "users", auth.currentUser.uid), {chat: activeConsultant.ID});
         }

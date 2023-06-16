@@ -50,6 +50,8 @@
     min-height: 100px;
     display: flex;
     align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .nav-content{
     height: 70px;
@@ -85,6 +87,7 @@
 .nav-toolbar-box{
     text-align: center;
     padding-left: 20px;
+    position: relative;
 }
 .nav-toolbar-box a{
     color: #5D5D64;
@@ -109,8 +112,8 @@
     display: flex;
     list-style: none;
     text-decoration: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     align-items: center;
     height: 60px;
 }
@@ -137,7 +140,7 @@
     position: absolute;
     display: none;
     width: 260px;
-    padding: 18px 0px 0px 0px;
+    padding: 18px 0 0 0;
     background-color: #fff;
 }
 .sub-menu-list>li{

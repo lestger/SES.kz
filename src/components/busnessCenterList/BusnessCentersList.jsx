@@ -1,5 +1,5 @@
 import {ContentLoader} from "../UI/Loader/ContentLoader";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export const BusnessCentersList = ({posts,loader}) => {
     const navigate=useNavigate();
@@ -34,8 +34,8 @@ export const BusnessCentersList = ({posts,loader}) => {
                                            </div>
                                        </div>
                                        <div className="bc__office-list">
-                                           <a href={`/products/premises/${business_center.id}`}>Показать
-                                               свободные офисы</a>
+                                           <Link href={`/products/premises/${business_center.id}`}>Показать
+                                               свободные офисы</Link>
                                        </div>
                                    </div>
                                </div>
