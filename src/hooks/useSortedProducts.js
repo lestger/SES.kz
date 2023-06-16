@@ -1,24 +1,23 @@
 import {useMemo} from "react";
+import {useSortedPosts} from "./useSortedPosts";
 
-export const useSortedPosts= (posts,filter) => {
+export const useSortedProducts= (posts,filter) => {
 
-    const sortedPosts=useMemo(()=>{
-        if(filter.sort){
-            if(filter.sort==='priceUp'){return [...posts].sort((a, b) => String(b['price']).localeCompare(String(a[''])))}
+    return useMemo(() => {
+        if (filter.sort) {
+            if (filter.sort === 'priceUp') {
+                return [...posts].sort((a, b) => String(b['price']).localeCompare(String(a['price'])))
+            }
             return [...posts].sort((a, b) => String(a[filter.sort]).localeCompare(String(b[filter.sort])))
         }
         return posts
-    },[filter.sort,posts])
-    return sortedPosts;
+    }, [filter.sort, posts]);
 }
 
-export const usePost = (posts,filter) => {
+export const useSortedProducts = (posts,filter) => {
     const sortedPosts=useSortedPosts(posts,filter);
     return useMemo(() => {
         if(filter.input){return sortedPosts.filter(p => (p.name.toLowerCase().includes(filter.input.toLowerCase())))}
-        if(filter.address){return sortedPosts.filter(p => (p.address.toLowerCase().includes(filter.address.toLowerCase())))}
-        if(filter.maxFloor){return sortedPosts.filter(p => (p.floors <= filter.maxFloor))}
-        if(filter.roomQuantity){return sortedPosts.filter(p => (p.rooms >= filter.roomQuantity))}
         if(filter.priceRange.from&&filter.priceRange.to){return sortedPosts.filter(p => (p.price >= filter.priceRange.from && p.price<=filter.priceRange.to))}
         return sortedPosts.filter(p => (p.name.toLowerCase().includes(filter.input.toLowerCase())))
 
